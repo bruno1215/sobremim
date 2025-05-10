@@ -68,3 +68,14 @@ a:hover {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
 }
+/* Animações na página */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
