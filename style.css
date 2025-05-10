@@ -1,81 +1,46 @@
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f4f4f4;
-}
-h1 {
-    color: #333;
-}
-ul {
-    list-style: none;
+    background: #6a1b9a;
+    margin: 0;
     padding: 0;
-}
-li {
-    margin: 10px;
-    font-size: 20px;
-}
-a {
-    text-decoration: none;
-    color: #007bff;
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-weight: bold;
-    padding: 10px;
+    justify-content: center;
+    min-height: 100vh;
 }
-a:hover {
-    color: #0056b3;
+.container {
+    background: #1e1e6b;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
-/* Adicionando ícones automaticamente com base no texto do link */
-[href*="github"]::before {
-    content: "\f09b";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
+h1 {
+    margin-bottom: 1rem;
+    color: #ffc107;
 }
-[href*="twitter"], [href*="x.com"]::before {
-    content: "\f099";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
+ul#links-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
-[href*="linkedin"]::before {
-    content: "\f0e1";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
+ul#links-list li {
+    margin: 0.5rem;
 }
-[href*="instagram"]::before {
-    content: "\f16d";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
+ul#links-list li a {
+    text-decoration: none;
+    color: #ffc107;
+    font-size: 2rem;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
-[href*="facebook"]::before {
-    content: "\f09a";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
+ul#links-list li a:hover {
+    color: #0077b5;
+    transform: scale(1.2);
 }
-[href*="whatsapp"]::before {
-    content: "\f232";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-}
-[href*="telegram"]::before {
-    content: "\f2c6";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-}
-[href*="lattes"]::before {
-    content: "\f02d";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-}
-/* Animações na página */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+ul#links-list li a i {
+    font-size: 2.5rem;
 }

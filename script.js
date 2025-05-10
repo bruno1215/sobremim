@@ -1,19 +1,21 @@
-document.addEventListener("DOMContentLoaded", function () {
-    console.log("Página carregada!");
-    // Ajustando responsividade para telas pequenas
-    function ajustarLayout() {
-        if (window.innerWidth < 600) {
-            document.body.style.fontSize = "16px";
-        } else {
-            document.body.style.fontSize = "20px";
-        }
-    }
-    ajustarLayout();
-    window.addEventListener("resize", ajustarLayout);
-    // Adicionando animação de fade-in ao carregar
-    document.body.style.opacity = "0";
-    setTimeout(() => {
-        document.body.style.transition = "opacity 1.5s ease-in-out";
-        document.body.style.opacity = "1";
-    }, 200);
+const links = [
+  { url: "https://github.com/bruno1215", icon: "bi-github" },
+  { url: "https://www.linkedin.com/in/bruno-silva-455441145", icon: "bi-linkedin" },
+  { url: "https://www.instagram.com/bsc.1512/", icon: "bi-instagram" },
+  { url: "https://www.facebook.com/bruno.silvaa1995/", icon: "bi-facebook" },
+  { url: "https://wa.me/5581986277331", icon: "bi-whatsapp" },
+  { url: "https://t.me/BrunoSilva2", icon: "bi-telegram" },
+  { url: "http://lattes.cnpq.br/1990389217375899", icon: "bi-person-badge" }
+];
+
+const list = document.getElementById("links-list");
+
+links.forEach(link => {
+  const li = document.createElement("li");
+  const a = document.createElement("a");
+  a.href = link.url;
+  a.target = "_blank";
+  a.innerHTML = `<i class="bi ${link.icon}"></i>`;
+  li.appendChild(a);
+  list.appendChild(li);
 });
